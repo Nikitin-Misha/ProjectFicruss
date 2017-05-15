@@ -9,7 +9,7 @@ public class Panel extends JPanel{
     int k=0;//индикатор состояния панели
     int width;//ширина
     int height;//высота
-    private PanelImage panelImage;//объект, включающий в себя 3 изображения панели, соответствующих разным состояниям
+    private final PanelImage panelImage;//объект, включающий в себя 3 изображения панели, соответствующих разным состояниям
 
     Panel(int x, int y, int width, int height, PanelImage panelImage){
         this.x=x;

@@ -25,11 +25,11 @@ public class Main {
 
         //Создание панели "Ficruss", при нажатии на которую начинается игра
         //Для каждой панели хранится 3 изображения, одно из которых рисуется в зависимости от значения индикатора k
-        Panel ficruss = new Panel(0,0,457,210,new PanelImage("assets/play1.png","assets/play2.png","assets/play2.png"));
+        final Panel ficruss = new Panel(0,0,457,210,new PanelImage("assets/play1.png","assets/play2.png","assets/play2.png"));
         //Задаются координаты и размеры кнопки
         ficruss.setBounds(WIDTH/2-229,HEIGHT/3-50, ficruss.width, ficruss.height);
         //Создание бэкграунда для 1й сцены
-        Panel background1 = new Panel(0,0,WIDTH,HEIGHT,new PanelImage("assets/startframe.png","assets/startframe.png","assets/startframe.png"));
+        final Panel background1 = new Panel(0,0,WIDTH,HEIGHT,new PanelImage("assets/startframe.png","assets/startframe.png","assets/startframe.png"));
         background1.setBounds(0,0, background1.width, background1.height);
         //Добавление панелей на фрейм
         frame1.add(ficruss);
@@ -76,41 +76,41 @@ public class Main {
     private static void startClicked(){
         //Создаем новые панели и добавляем их на фрейм
         //Левая панель выбора персонажа
-        Panel panel2 = new Panel(0,0,298,500,new PanelImage("assets/alieninincubator1.png","assets/reksinincubator1.png","assets/dragoinincubator1.png"));
+        final Panel panel2 = new Panel(0,0,298,500,new PanelImage("assets/alieninincubator1.png","assets/reksinincubator1.png","assets/dragoinincubator1.png"));
         panel2.setBounds(WIDTH/4-149,HEIGHT/2-250, panel2.width, panel2.height);
         panel2.k=0;
         frame1.add(panel2);
 
         //Правая панель выбора персонажа
-        Panel panel4 = new Panel(0,0,298,500,new PanelImage("assets/alieninincubator.png","assets/reksinincubator.png","assets/dragoinincubator.png"));
+        final Panel panel4 = new Panel(0,0,298,500,new PanelImage("assets/alieninincubator.png","assets/reksinincubator.png","assets/dragoinincubator.png"));
         panel4.setBounds(WIDTH/4*3-149,HEIGHT/2-250, panel4.width, panel4.height);
         panel4.k =0;
         frame1.add(panel4);
 
         //Стрелки выбора персонажа
-        Panel rightnarrow1= new Panel(0,0,60,71,new PanelImage("assets/rightnarrow.png","assets/rightnarrow2.png","assets/rightnarrow3.png"));
+        final Panel rightnarrow1= new Panel(0,0,60,71,new PanelImage("assets/rightnarrow.png","assets/rightnarrow2.png","assets/rightnarrow3.png"));
         rightnarrow1.setBounds(WIDTH/4+150,HEIGHT/2-36,rightnarrow1.width,rightnarrow1.height);
         frame1.add(rightnarrow1);
 
-        Panel rightnarrow2= new Panel(0,0,60,71,new PanelImage("assets/rightnarrow.png","assets/rightnarrow2.png","assets/rightnarrow3.png"));
+        final Panel rightnarrow2= new Panel(0,0,60,71,new PanelImage("assets/rightnarrow.png","assets/rightnarrow2.png","assets/rightnarrow3.png"));
         rightnarrow2.setBounds(WIDTH/4*3+150,HEIGHT/2-36,rightnarrow2.width,rightnarrow2.height);
         frame1.add(rightnarrow2);
 
-        Panel leftnarrow1= new Panel(0,0,60,71,new PanelImage("assets/leftnarrow.png","assets/leftnarrow2.png","assets/leftnarrow3.png"));
+        final Panel leftnarrow1= new Panel(0,0,60,71,new PanelImage("assets/leftnarrow.png","assets/leftnarrow2.png","assets/leftnarrow3.png"));
         leftnarrow1.setBounds(WIDTH/4-210,HEIGHT/2-36,leftnarrow1.width,leftnarrow1.height);
         frame1.add(leftnarrow1);
 
-        Panel leftnarrow2= new Panel(0,0,60,71,new PanelImage("assets/leftnarrow.png","assets/leftnarrow2.png","assets/leftnarrow3.png"));
+        final Panel leftnarrow2= new Panel(0,0,60,71,new PanelImage("assets/leftnarrow.png","assets/leftnarrow2.png","assets/leftnarrow3.png"));
         leftnarrow2.setBounds(WIDTH/4*3-210,HEIGHT/2-36,leftnarrow2.width,leftnarrow2.height);
         frame1.add(leftnarrow2);
 
         //Кнопка "Play"
-        Panel play= new Panel(0,0,200,111,new PanelImage("assets/play3.png","assets/play4.png","assets/play4.png"));
+        final Panel play= new Panel(0,0,200,111,new PanelImage("assets/play3.png","assets/play4.png","assets/play4.png"));
         play.setBounds(WIDTH/2 - 100,HEIGHT/3*2,play.width,play.height);
         frame1.add(play);
 
         //Бэкграунд 2й сцены
-        Panel background2= new Panel(0,0,WIDTH,HEIGHT,new PanelImage("assets/background.png","assets/background.png","assets/background.png"));
+        final Panel background2= new Panel(0,0,WIDTH,HEIGHT,new PanelImage("assets/background.png","assets/background.png","assets/background.png"));
         background2.setBounds(0,0,background2.width,background2.height);
         frame1.add(background2);
 
@@ -279,7 +279,7 @@ public class Main {
                 frame1.remove(rightnarrow2);
                 frame1.remove(play);
                 //Создаём объект класса Game
-                Game game=new Game();
+                final Game game=new Game();
                 //В зависимости от значения счетчика узнаем, какого персонажа выбрал пользователь, и передаём эту информацию в game
                 if (panel2.k ==-1){ game.setN2(1); }
                 if (panel2.k ==0){ game.setN2(2); }
@@ -294,7 +294,7 @@ public class Main {
                 game.setPreferredSize(new Dimension(WIDTH,HEIGHT));
 
                 //Создаётся кнопка "restart" и добавляется на панель
-                Panel restart = new Panel(0,0,62,60,new PanelImage("assets/restart1.png","assets/restart2.png","assets/restart2.png"));
+                final Panel restart = new Panel(0,0,62,60,new PanelImage("assets/restart1.png","assets/restart2.png","assets/restart2.png"));
                 restart.setBounds(WIDTH/2-31,0,restart.width, restart.height);
                 frame1.add(restart);
                 //установка менеджера компоновки(BorderLayout компонует по сторонам света)
