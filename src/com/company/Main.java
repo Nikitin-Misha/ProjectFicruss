@@ -294,8 +294,8 @@ public class Main {
                 game.setPreferredSize(new Dimension(WIDTH,HEIGHT));
 
                 //Создаётся кнопка "restart" и добавляется на панель
-                final Panel restart = new Panel(0,0,62,60,new PanelImage("assets/restart1.png","assets/restart2.png","assets/restart2.png"));
-                restart.setBounds(WIDTH/2-31,0,restart.width, restart.height);
+                final Panel restart = new Panel(0,0,(int)(0.0454*WIDTH),(int)(0.078*HEIGHT),new PanelImage("assets/restart1.png","assets/restart2.png","assets/restart2.png"));
+                restart.setBounds(WIDTH/2-(int)(0.0454*WIDTH)/2,0,restart.width, restart.height);
                 frame1.add(restart);
                 //установка менеджера компоновки(BorderLayout компонует по сторонам света)
                 frame1.setLayout(new BorderLayout());
