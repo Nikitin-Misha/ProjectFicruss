@@ -8,6 +8,7 @@ import java.net.URL;
 import java.util.ArrayList;
 
 public class Game extends Canvas implements Runnable {
+
     //Получение размеров экрана
     private static Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     private static int WIDTH = dim.width;
@@ -144,8 +145,8 @@ public class Game extends Canvas implements Runnable {
     }
 
     //Инициализация - у всех объектов задаются координаты, масса, скорость и т.п.
-    void init()
-    {
+    void init() {
+
         character1.setCnt(20);
         character2.setCnt(20);
         int n = 0;
@@ -396,7 +397,7 @@ public class Game extends Canvas implements Runnable {
         }
         //Рисование количества патронов
 
-
+        g.setFont(Main.f);
         g.setColor(Color.WHITE);
         String s1 = "" +character2.getCnt();
         String s2 = ""+character1.getCnt();

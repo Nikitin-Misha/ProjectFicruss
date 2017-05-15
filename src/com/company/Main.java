@@ -7,6 +7,7 @@ import java.awt.event.MouseEvent;
 
 
 public class Main {
+    final static Font f = new Font("",Font.PLAIN,30);
     //Получение размеров экрана
     private static Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
     private static int WIDTH = dim.width;
